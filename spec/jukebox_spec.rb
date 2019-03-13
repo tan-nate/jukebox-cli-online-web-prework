@@ -34,8 +34,8 @@ describe "CLI Jukebox" do
       end
 
       it 'returns an error when given a number that does not correspond to a song' do
-        allow(self).to receive(:gets).and_return("12323")
-        expect { play(songs) }.to output(/Invalid input, please try again/).to_stdout
+       allow(self).to receive(:gets).and_return("12323")
+       expect { play(songs) }.to output(/Invalid input, please try again/).to_stdout
       end
 
       it 'returns an error when given a name that does not correspond to an existing song' do
